@@ -7,7 +7,7 @@ COPY package.json ./
 RUN npm i
 COPY ./ ./
 
-RUN npm build 
+RUN npm run build 
 # /app/build
 
 # Run phase
