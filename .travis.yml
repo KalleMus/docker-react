@@ -8,14 +8,14 @@ before_install:
 script:
   - docker run -e CI=true kalle1337/docker-react npm test
 
-# http://dockerreact-env.eba-pzvfyxgt.us-east-2.elasticbeanstalk.com/
+# http://dockerreact2-env.eba-uapcqvad.us-east-2.elasticbeanstalk.com/
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
-  app: "docker-react"
-  env: "DockerReact-env"
+  app: "docker-react-2"
+  env: "DockerReact2-env"
   bucket_name: "elasticbeanstalk-us-east-2-977744108731"
-  bucket_path: "docker-react"
+  bucket_path: "docker-react-2"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
